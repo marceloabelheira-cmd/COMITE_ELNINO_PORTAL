@@ -144,22 +144,28 @@ textarea{min-height:78px;resize:vertical}
 .btn.ghost:hover{background:#EDF1F7}
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .lgpd{font-size:11.5px;color:var(--muted);border-left:3px solid var(--lblue);padding:8px 12px;background:#F7FAFC;margin-top:10px}
-.elnino-head{background:linear-gradient(90deg,#FFF3E0,#FFE3BE);border-bottom:1px solid #F3D9A8;align-items:center}
-.elnino-head-ico{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(232,95,19,.35)}
-.elnino-head-ico svg{width:18px;height:18px}
-.elnino-head h3{margin:0;font-size:15.5px;font-weight:700;color:#8A5A00;line-height:1.4}
-.elnino-head h3 span{font-weight:400;color:#9C6A15;font-size:13px}
+.elnino-head{background:linear-gradient(90deg,#0B2A4A 0%,#123A68 45%,#1B63B0 100%);border-bottom:none;padding:17px 20px}
+.elnino-head-ico{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(232,95,19,.5)}
+.elnino-head-ico svg{width:22px;height:22px}
+.elnino-head h3{margin:0;font-size:20px;font-weight:800;color:#fff;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.elnino-head h3 span{font-weight:400;color:#BFDAF7;font-size:15.5px}
 .whatis-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
-.whatis-tile{display:flex;gap:12px;align-items:flex-start;background:#F7FAFD;border:1px solid var(--line);border-radius:10px;padding:14px}
+.whatis-tile{display:flex;gap:12px;align-items:center;background:linear-gradient(160deg,#F9FBFD,#EBF2FA);border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:10px;padding:16px}
 .whatis-tile .ico{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--navy-2);display:flex;align-items:center;justify-content:center}
 .whatis-tile .ico svg{width:22px;height:22px}
 .whatis-tile h5{margin:2px 0 3px;font-size:13.5px;color:var(--navy)}
 .whatis-tile p{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
-.reassure-banner{display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,#FFF3E0,#FFE8CC);border:1px solid #F3D9A8;border-radius:10px;padding:16px 20px;margin:18px 0}
-.reassure-banner .ico{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center}
-.reassure-banner .ico svg{width:26px;height:26px}
-.reassure-banner h5{margin:0 0 4px;font-size:15px;color:#8A5A00}
-.reassure-banner p{margin:0;font-size:13px;color:#6B4A1E;line-height:1.5}
+.whatis-extra{text-align:center;margin:14px 0 4px}
+.whatis-extra a{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:bold;color:var(--navy-2);text-decoration:none;padding:8px 14px;border:1px solid var(--line);border-radius:20px;background:#F7FAFD}
+.whatis-extra a:hover{background:#EEF3F9}
+.whatis-extra a svg{width:14px;height:14px;flex:0 0 auto}
+.whatis-extra a span{font-weight:normal;color:var(--muted)}
+.reassure-banner{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,#FFF3E0,#FFE0B0);border:2px solid #F0C378;border-radius:10px;padding:20px 24px;margin:18px 0;box-shadow:0 2px 10px rgba(200,138,0,.12)}
+.reassure-banner .ico{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(232,95,19,.4)}
+.reassure-banner .ico svg{width:30px;height:30px}
+.reassure-eyebrow{display:block;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.06em;color:#B5790A;margin-bottom:3px}
+.reassure-banner h5{margin:0 0 6px;font-size:19px;font-weight:800;color:#7A4E00;line-height:1.3}
+.reassure-banner p{margin:0;font-size:14px;color:#6B4A1E;line-height:1.55}
 .expect-label{font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 10px}
 .expect-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .expect-tile{border-radius:10px;padding:16px;color:#fff;position:relative;overflow:hidden}
@@ -272,8 +278,13 @@ footer.foot strong{color:#fff}
   .alert .sev{order:2;margin-left:auto}
   .alert>div{order:3;flex:1 1 100%}
 
-  .elnino-head h3{font-size:14.5px}
-  .elnino-head h3 span{display:block;margin-top:2px}
+  .elnino-head{padding:14px}
+  .elnino-head h3{font-size:15px;white-space:normal;overflow:visible;text-overflow:clip}
+  .elnino-head h3 span{display:block;margin-top:2px;font-size:13px}
+
+  /* faixa "não é motivo de pânico": ícone acima do texto, em largura cheia */
+  .reassure-banner{flex-direction:column;align-items:flex-start;gap:10px;padding:16px}
+  .reassure-banner h5{font-size:17px}
 }
 
 @media(max-width:420px){
@@ -408,13 +419,14 @@ footer.foot strong{color:#fff}
         </div>
         <div class="whatis-tile">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg></div>
-          <div><h5>Ciclos irregulares</h5><p>Ocorre a cada 2 a 7 anos, com intensidade variável.</p><a class="care-link" style="font-size:10.5px;margin-top:6px" href="https://marceloabelheira-cmd.github.io/comparativoELNINO_outroseventos/" target="_blank" rel="noopener">El Niño 2015/2016 e 2023/2024 — Impactos no Estado do Rio de Janeiro (clique aqui)</a></div>
+          <div><h5>Ciclos irregulares</h5><p>Ocorre a cada 2 a 7 anos, com intensidade variável.</p></div>
         </div>
       </div>
+      <div class="whatis-extra"><a href="https://marceloabelheira-cmd.github.io/comparativoELNINO_outroseventos/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg> El Niño 2015/2016 e 2023/2024 — Impactos no Estado do Rio de Janeiro <span>(clique aqui)</span></a></div>
 
       <div class="reassure-banner">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div><h5>Não é sinônimo de tragédia</h5><p>É um cenário de previsão e tendência climática — não uma tragédia em andamento. Os indicadores desta página mostram a situação real e atualizada do território fluminense.</p></div>
+        <div><span class="reassure-eyebrow">Mensagem importante</span><h5>Não é motivo de pânico — é monitoramento e preparação</h5><p>O El Niño é um cenário de previsão e tendência climática, não uma tragédia em andamento. Os indicadores desta página mostram a situação real e atualizada do território fluminense, para que o Estado e a população se preparem com antecedência.</p></div>
       </div>
 
       <div class="expect-label">O que esperar no Rio de Janeiro, a partir de setembro</div>
@@ -489,23 +501,6 @@ footer.foot strong{color:#fff}
 
   <div class="grid g2">
     <div class="mod">
-      <div class="mod-head"><div><h3>O que a Sala de Situação publica</h3><p>Produtos de monitoramento abertos ao público, com data, número e versão.</p></div><span class="anchor">art. 24 · art. 25</span></div>
-      <div class="mod-body">
-        <table>
-          <thead><tr><th>Produto</th><th>Periodicidade</th><th>Acesso</th></tr></thead>
-          <tbody>
-            <tr><td><b>Boletim de Situação</b><br><span style="color:var(--muted)">Síntese diária de clima, focos, reservatórios e ocorrências do CBMERJ</span></td><td>Diário</td><td><span class="tag pub">Público</span></td></tr>
-            <tr><td><b>Mapas Temáticos</b><br><span style="color:var(--muted)">Focos de calor, suscetibilidade a incêndio, vulnerabilidade social</span></td><td>Semanal</td><td><span class="tag pub">Público</span></td></tr>
-            <tr><td><b>Relatório Situacional</b><br><span style="color:var(--muted)">Análise integrada por eixo, com cenários prospectivos</span></td><td>Quinzenal</td><td><span class="tag pub">Público</span></td></tr>
-            <tr><td><b>Notas Técnicas</b><br><span style="color:var(--muted)">Episódios críticos e situações específicas</span></td><td>Eventual</td><td><span class="tag pub">Público</span></td></tr>
-            <tr><td><b>Cenários Prospectivos</b><br><span style="color:var(--muted)">Análises de risco periódicas</span></td><td>Mensal</td><td><span class="tag res">Resumo público</span></td></tr>
-          </tbody>
-        </table>
-        <div class="note">Cada publicação traz fonte, data de corte dos dados e nota de método. Séries em CSV e camadas em GeoJSON ficam na página de dados abertos, com API de leitura para prefeituras e pesquisadores.</div>
-      </div>
-    </div>
-
-    <div class="mod">
       <div class="mod-head"><div><h3>Sala de Situação do El Niño</h3><p>Conheça o centro de monitoramento contínuo por trás dos dados desta página.</p></div></div>
       <div class="mod-body">
         <div class="sala-promo-illus">
@@ -563,6 +558,23 @@ footer.foot strong{color:#fff}
           <li>Níveis de rios e reservatórios</li>
           <li>Riscos ambientais e focos de incêndio</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="mod">
+      <div class="mod-head"><div><h3>O que a Sala de Situação publica</h3><p>Produtos de monitoramento abertos ao público, com data, número e versão.</p></div><span class="anchor">art. 24 · art. 25</span></div>
+      <div class="mod-body">
+        <table>
+          <thead><tr><th>Produto</th><th>Periodicidade</th><th>Acesso</th></tr></thead>
+          <tbody>
+            <tr><td><b>Boletim de Situação</b><br><span style="color:var(--muted)">Síntese diária de clima, focos, reservatórios e ocorrências do CBMERJ</span></td><td>Diário</td><td><span class="tag pub">Público</span></td></tr>
+            <tr><td><b>Mapas Temáticos</b><br><span style="color:var(--muted)">Focos de calor, suscetibilidade a incêndio, vulnerabilidade social</span></td><td>Semanal</td><td><span class="tag pub">Público</span></td></tr>
+            <tr><td><b>Relatório Situacional</b><br><span style="color:var(--muted)">Análise integrada por eixo, com cenários prospectivos</span></td><td>Quinzenal</td><td><span class="tag pub">Público</span></td></tr>
+            <tr><td><b>Notas Técnicas</b><br><span style="color:var(--muted)">Episódios críticos e situações específicas</span></td><td>Eventual</td><td><span class="tag pub">Público</span></td></tr>
+            <tr><td><b>Cenários Prospectivos</b><br><span style="color:var(--muted)">Análises de risco periódicas</span></td><td>Mensal</td><td><span class="tag res">Resumo público</span></td></tr>
+          </tbody>
+        </table>
+        <div class="note">Cada publicação traz fonte, data de corte dos dados e nota de método. Séries em CSV e camadas em GeoJSON ficam na página de dados abertos, com API de leitura para prefeituras e pesquisadores.</div>
       </div>
     </div>
   </div>
