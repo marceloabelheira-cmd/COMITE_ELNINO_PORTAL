@@ -100,6 +100,12 @@ main{padding:28px 0 60px}
 .card .unit{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .card.hot{border-left:4px solid var(--orange)}
 
+.imec-feature{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#FFF4EA,#FFFFFF);border:1px solid var(--orange);border-left:5px solid var(--orange);border-radius:var(--radius);padding:14px 18px;margin-bottom:16px;text-decoration:none;color:var(--ink);flex-wrap:wrap}
+.imec-feature:hover{background:#FFEFDC}
+.imec-feature-tag{flex:0 0 auto;background:var(--orange);color:#fff;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:20px}
+.imec-feature-title{font-weight:800;color:var(--navy);font-size:14.5px}
+.imec-feature-desc{color:var(--muted);font-size:13px}
+
 /* hero público */
 .hero{background:var(--navy);color:#fff;border-radius:var(--radius);padding:26px;display:grid;
   grid-template-columns:1.3fr 1fr;gap:26px;align-items:center;margin-bottom:18px}
@@ -497,6 +503,23 @@ footer.foot strong{color:#fff}
     </div>
   </div>
 
+  <div class="mod">
+    <div class="mod-head"><div><h3>Como se proteger</h3></div></div>
+    <div class="mod-body">
+      <a class="imec-feature" href="https://www.rj.gov.br/saude/node/4164" target="_blank" rel="noopener">
+        <span class="imec-feature-tag">Destaque</span>
+        <span class="imec-feature-title">IMEC — Índice de Monitoramento de Calor (SES-RJ)</span>
+        <span class="imec-feature-desc">Classifica o risco de calor extremo à saúde por região do estado →</span>
+      </a>
+      <div class="grid g4">
+        <div class="card"><h4>Calor extremo</h4><p>Beba água mesmo sem sede, evite esforço físico entre 11h e 16h e nunca deixe crianças, idosos ou animais em veículos fechados. Tontura, cãibras e pele quente e seca são sinais de alerta que pedem atendimento imediato.</p><a class="care-link" href="https://mapas.inmet.gov.br/" target="_blank" rel="noopener">Veja temperatura e umidade em tempo real no Portal do INMET →</a></div>
+        <div class="card"><h4>Fumaça e ar seco</h4><p>Reduza atividades ao ar livre em dias de fumaça de queimadas, mantenha portas e janelas fechadas nos horários de pico e procure atendimento ao primeiro sinal de falta de ar, tosse persistente ou piora da asma/bronquite.</p><a class="care-link" href="https://portalsigqar.inea.rj.gov.br/" target="_blank" rel="noopener">Consulte o índice de qualidade do ar no Portal SIGQAR (INEA) →</a></div>
+        <div class="card"><h4>Uso do fogo</h4><p>Qualquer queimada, mesmo de pequeno porte, é proibida em período de estiagem severa e pode configurar crime ambiental. Ao avistar fogo em vegetação, ligue 193 (Corpo de Bombeiros) e não se aproxime da área.</p><a class="care-link" href="https://panorama.sipam.gov.br/painel-do-fogo" target="_blank" rel="noopener">Veja o mapa em tempo real de incêndios e queimadas →</a></div>
+        <div class="card"><h4>Água</h4><p>Priorize o consumo essencial, conserte vazamentos e evite lavar calçadas ou veículos com mangueira em período de restrição. Em caso de desabastecimento, procure a concessionária local e acompanhe o rodízio da sua região.</p><a class="care-link" href="https://www.ana.gov.br/sar0/MedicaoSin" target="_blank" rel="noopener">Veja a situação dos reservatórios do Sistema Interligado Nacional →</a></div>
+      </div>
+    </div>
+  </div>
+
   <div class="grid g2">
     <div class="mod">
       <div class="mod-head"><div><h3>Sala de Situação do El Niño</h3><p>Conheça o centro de monitoramento contínuo por trás dos dados desta página.</p></div></div>
@@ -575,19 +598,6 @@ footer.foot strong{color:#fff}
   </div>
 
   <div class="mod">
-    <div class="mod-head"><div><h3>Como se proteger</h3></div></div>
-    <div class="mod-body">
-      <div class="grid g4">
-        <div class="card"><h4>Calor extremo</h4><p>Hidratação, horários de menor exposição, cuidado com crianças e pessoas idosas, pontos de resfriamento próximos.</p><a class="care-link" href="https://mapas.inmet.gov.br/" target="_blank" rel="noopener">Veja dados de temperatura e umidade no Portal do INMET →</a></div>
-        <div class="card"><h4>Fumaça e ar seco</h4><p>Sinais de alerta respiratório, quando procurar unidade de saúde, como proteger quem tem doença crônica.</p><a class="care-link" href="https://semapisindicato.org.br/orientacoes-de-saude-frente-a-fumaca-das-queimadas/" target="_blank" rel="noopener">Orientações →</a></div>
-        <div class="card"><h4>Uso do fogo</h4><p>O que não fazer na estiagem, o que é infração, como acionar o CBMERJ e as brigadas municipais.</p><a class="care-link" href="https://panorama.sipam.gov.br/painel-do-fogo" target="_blank" rel="noopener">Veja mapa interativo que monitora incêndios e queimadas em tempo real no Brasil →</a></div>
-        <div class="card"><h4>Água</h4><p>Uso consciente, armazenamento seguro, o que fazer em rodízio, a quem recorrer no desabastecimento.</p><a class="care-link" href="https://www.ana.gov.br/sar0/MedicaoSin" target="_blank" rel="noopener">Veja a situação dos reservatórios →</a></div>
-      </div>
-      <p style="margin:14px 0 0;font-size:13px"><a href="https://www.rj.gov.br/saude/node/4164" target="_blank" rel="noopener" style="color:var(--navy-2);font-weight:bold;text-decoration:none">Conheça o IMEC da SES-RJ, que classifica riscos de calor extremo à saúde →</a></p>
-    </div>
-  </div>
-
-  <div class="mod">
     <div class="mod-head"><div><h3>Legislação e referências técnicas</h3><p>Base legal do Comitê e material de apoio à decisão.</p></div></div>
     <div class="mod-body">
       <div class="grid g2">
@@ -603,9 +613,9 @@ footer.foot strong{color:#fff}
         <div>
           <div class="eyebrow" style="margin-bottom:8px">Planos e dados</div>
           <ul class="doclist">
+            <li><a href="https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/painel-el-nino-2026-2027-segundo-boletim-sobre-o-monitoramento-do-fenomeno-no-brasil-e-publicado" target="_blank" rel="noopener">El Niño 2026: saiba detalhes sobre o monitoramento, previsões e os possíveis impactos do fenômeno no Brasil</a><span>INMET, INPE, ANA, CEMADEN, SGB, SEDEC e CENSIPAM — Boletim nº 02, julho/2026</span></li>
             <li><a href="https://abm.org.br/guia-pratico-para-enfrentamento-ao-super-el-nino-e-eventos-climaticos-extremos/" target="_blank" rel="noopener">Guia Prático para Enfrentamento ao Super El Niño</a><span>Associação Brasileira de Municípios (ABM)</span></li>
-            <li><a href="https://www.redus.org.br/beat-the-heat-mutirao-contra-o-calor-extremo/noticias/nova-postagem-2WOhtV" target="_blank" rel="noopener">Diagnóstico do Beat the Heat</a><span>ReDUS · UNEP · Prefeitura do Rio de Janeiro</span></li>
-            <li><a href="https://coolcoalition.org/" target="_blank" rel="noopener">Cool Coalition</a><span>Plataforma global de resfriamento sustentável (UNEP)</span></li>
+            <li><a href="https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-08/manual-traz-nova-classificacao-de-riscos-de-desastres-em-areas-urbanas" target="_blank" rel="noopener">Mapeamento de Riscos: Conceitos e Métodos Aplicados a Processos Geológicos e Hidrológicos</a><span>Ministério das Cidades — via Agência Brasil</span></li>
             <li><a href="https://www.maritaca.ai/blog/conheca-o-data-ocean/" target="_blank" rel="noopener">Data Ocean</a><span>IA que conecta bases de dados nacionais — Maritaca AI</span></li>
           </ul>
         </div>
