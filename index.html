@@ -1188,17 +1188,18 @@ footer.foot strong{color:#fff}
   .eixo-link-btn:hover, .eixo-link-btn:focus-visible{border-color:var(--brand); background:var(--brand-soft); outline:none;}
   .eixo-kicker{font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--brand); display:block; margin-bottom:4px;}
   /* filtros de Reuniões / Ações por Câmara Técnica e Eixo */
-  .filter-bar{display:flex; align-items:center; gap:12px 14px; flex-wrap:wrap; margin-bottom:18px; padding:14px 16px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px;}
-  .filter-field{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
-  .filter-field label{font-size:11.5px; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:.03em;}
+  .filter-bar{display:flex; align-items:center; gap:8px 16px; flex-wrap:wrap; margin-bottom:14px; padding:9px 14px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px;}
+  .filter-field{display:flex; align-items:center; gap:6px; flex-wrap:nowrap;}
+  .filter-field label{font-size:10.5px; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:.03em; white-space:nowrap;}
   .filter-select{
-    padding:8px 12px; border-radius:8px; border:1px solid var(--border); background:var(--surface-2);
-    color:var(--text-primary); font-size:13px; min-width:210px; max-width:100%;
+    padding:6px 9px; border-radius:7px; border:1px solid var(--border); background:var(--surface-2);
+    color:var(--text-primary); font-size:12.5px; min-width:0; width:auto; max-width:220px;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
   .filter-select:disabled{opacity:.55; cursor:not-allowed;}
   .filter-select:focus{outline:none; border-color:var(--brand); box-shadow:0 0 0 3px var(--brand-soft);}
   .filter-clear-btn{
-    all:unset; cursor:pointer; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px;
+    all:unset; cursor:pointer; font-size:11.5px; font-weight:700; padding:6px 12px; border-radius:7px;
     border:1px solid var(--border); color:var(--text-secondary); background:var(--surface-2); white-space:nowrap;
     transition:border-color .12s, color .12s; box-sizing:border-box;
   }
@@ -2798,9 +2799,63 @@ const reunioes = [
    camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
    camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
    dataSort:'2026-09-29', data:'29/09/2026', horario:'10h30',
-   assunto:'Reunião com Microsoft — desenvolvimento do Portal El Niño',
+   assunto:'3ª Reunião sobre o Portal El Niño — com SETD e Empresa (Microsoft)',
    responsavel:'Não informado',
    participantes:'Secretaria de Transformação Digital, Microsoft (parceria e projetos em andamento)',
+   local:'On-line'
+ },
+ {
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
+   camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
+   dataSort:'2026-09-30', data:'30/09/2026',
+   assunto:'4ª Reunião sobre o Portal El Niño — com SETD',
+   responsavel:'Não informado',
+   participantes:'Secretaria de Transformação Digital (SETD)',
+   local:'Presencial · SUOP'
+ },
+ {
+   camaraEixo:'V · Câmara Técnica Transversal',
+   camaraId:'transv', eixoTema:null,
+   dataSort:'2026-10-01', data:'01/10/2026',
+   assunto:'Reunião de Ilhas de Calor / PCEC',
+   responsavel:'Não informado',
+   participantes:'Não informado',
+   local:'On-line'
+ },
+ {
+   camaraEixo:'I · Saúde e Proteção Social',
+   camaraId:'ct1', eixoTema:null,
+   dataSort:'2026-10-06', data:'06/10/2026',
+   assunto:'Reunião de Atualização',
+   responsavel:'Não informado',
+   participantes:'Não informado',
+   local:'On-line'
+ },
+ {
+   camaraEixo:'I · Saúde e Proteção Social — Eixo: Bem-Estar Animal',
+   camaraId:'ct1', eixoTema:'Bem-Estar Animal',
+   dataSort:'2026-10-06', data:'06/10/2026',
+   assunto:'Reunião do PLANCON Animais',
+   responsavel:'Não informado',
+   participantes:'Não informado',
+   local:'Presencial · Auditório ESDEC'
+ },
+ {
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
+   camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
+   dataSort:'2026-10-06', data:'06/10/2026',
+   assunto:'5ª Reunião sobre o Portal El Niño — com SETD, Empresa e Governo do RS',
+   responsavel:'Não informado',
+   participantes:'Secretaria de Transformação Digital (SETD), empresa parceira (Microsoft) e representantes do Governo do Rio Grande do Sul',
+   local:'On-line'
+ },
+ {
+   camaraEixo:'II · Agricultura, Pecuária e Segurança Alimentar',
+   camaraId:'ct2', eixoTema:null,
+   dataSort:'2026-10-08', data:'08/10/2026',
+   assunto:'4ª Reunião — acompanhamento das ações em andamento (leitura da ata da 2ª reunião)',
+   responsavel:'Não informado',
+   participantes:'Não informado',
    local:'On-line'
  },
 ];
@@ -3162,7 +3217,7 @@ const acoesPreventivas = [
    camaraId:null, eixoTema:null,
    oQue:'Oficina Técnica da Defesa Civil — Planejamento Orçamentário (PPA, LDO e LOA), integrante da Agenda de Continuidade da Defesa Civil.',
    dataSort:'2026-10-07', quando:'07/10/2026 · 14h',
-   status:'programado',
+   status:'finalizado',
    quem:'Defesa Civil (SEDEC-RJ) — TC Adriana Biachi',
    municipio:'Rio de Janeiro',
    onde:'On-line — transmitido do Quartel Central do CBMERJ (Praça da República, 45, Centro, Rio de Janeiro - RJ)',
@@ -3192,6 +3247,78 @@ const acoesPreventivas = [
    onde:'Rio de Janeiro (Capital) — Auditório do EMG do Quartel Central',
    como:'Reunião plenária a ser realizada no Auditório do EMG do Quartel Central, reunindo representantes das instituições integrantes do Comitê, das câmaras técnicas e de órgãos de defesa civil, para apresentação do panorama de ações desenvolvidas e alinhamento das próximas etapas de trabalho.',
    resumo:'Terceira Reunião Plenária do Comitê Estadual de Enfrentamento aos Efeitos do El Niño, a ser realizada no Auditório do EMG do Quartel Central, seguindo formato e local semelhantes aos da Primeira Reunião Plenária.'
+ },
+ {
+   titulo:'REDE SALVAR — Mobilização para Enfrentamento ao Excesso de Calor',
+   camaraId:'transv', eixoTema:null,
+   oQue:'Mobilização da Rede Salvar para enfrentamento ao excesso de calor, com ação de conscientização junto à população.',
+   dataSort:'2026-10-09', quando:'09/10/2026',
+   status:'finalizado',
+   quem:'Rede Salvar',
+   municipio:'Rio de Janeiro',
+   onde:'Não informado',
+   como:'Ação de mobilização e conscientização promovida pela Rede Salvar para enfrentamento ao excesso de calor.',
+   resumo:'Mobilização da Rede Salvar para enfrentamento ao excesso de calor.'
+ },
+ {
+   titulo:'Elaboração e Distribuição de Panfletos para Alerta 40199',
+   camaraId:'ct2', eixoTema:null,
+   oQue:'Elaboração e distribuição de panfletos informativos vinculados ao Alerta 40199.',
+   dataSort:'2026-10-06', quando:'06/10/2026',
+   status:'finalizado',
+   quem:'SEAPPADI',
+   municipio:'Rio de Janeiro',
+   onde:'Não informado',
+   como:'Produção e distribuição de material informativo (panfletos) relacionado ao Alerta 40199, pela SEAPPADI.',
+   resumo:'Elaboração e distribuição de panfletos informativos vinculados ao Alerta 40199, pela SEAPPADI.'
+ },
+ {
+   titulo:'Disponibilização de Máquinas e Equipamentos para o Município de Sumidouro',
+   camaraId:'ct2', eixoTema:null,
+   oQue:'Disponibilização de máquinas e equipamentos para apoio ao município de Sumidouro.',
+   dataSort:'2026-10-04', quando:'04/10/2026',
+   status:'finalizado',
+   quem:'SEAPPADI',
+   municipio:'Sumidouro',
+   onde:'Município de Sumidouro',
+   como:'Disponibilização de máquinas e equipamentos pela SEAPPADI em apoio ao município de Sumidouro.',
+   resumo:'Disponibilização de máquinas e equipamentos para o município de Sumidouro, pela SEAPPADI.'
+ },
+ {
+   titulo:'Boletim Informativo — Evento de Granizo',
+   camaraId:'ct2', eixoTema:null,
+   oQue:'Elaboração de boletim informativo sobre evento de granizo.',
+   dataSort:'2026-09-30', quando:'30/09/2026',
+   status:'finalizado',
+   quem:'SEAPPADI',
+   municipio:'Rio de Janeiro',
+   onde:'Não informado',
+   como:'Elaboração e divulgação de boletim informativo pela SEAPPADI sobre evento de granizo.',
+   resumo:'Boletim informativo sobre evento de granizo, elaborado pela SEAPPADI.'
+ },
+ {
+   titulo:'Oficina — Elaboração de PLANCONs',
+   camaraId:'transv', eixoTema:null,
+   oQue:'Oficina voltada à elaboração de Planos de Contingência (PLANCONs) municipais.',
+   dataSort:'2026-09-30', quando:'30/09/2026',
+   status:'finalizado',
+   quem:'REDEC 11',
+   municipio:'Rio de Janeiro',
+   onde:'Não informado',
+   como:'Oficina promovida pela REDEC 11 voltada à elaboração de Planos de Contingência (PLANCONs) municipais.',
+   resumo:'Oficina de elaboração de PLANCONs, promovida pela REDEC 11.'
+ },
+ {
+   titulo:'Elaboração do PLANCON — Agricultura',
+   camaraId:'ct2', eixoTema:null,
+   oQue:'Elaboração do Plano de Contingência (PLANCON) voltado à área de Agricultura.',
+   dataSort:'2026-09-30', quando:'30/09/2026',
+   status:'finalizado',
+   quem:'SEAPPADI',
+   municipio:'Rio de Janeiro',
+   onde:'Não informado',
+   como:'Elaboração do Plano de Contingência (PLANCON) da área de Agricultura, pela SEAPPADI.',
+   resumo:'Elaboração do PLANCON — Agricultura, pela SEAPPADI.'
  },
 ];
 
