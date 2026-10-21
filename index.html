@@ -129,17 +129,7 @@ main{padding:28px 0 60px}
 .bars i.on{background:var(--orange)}
 .gauge small{display:block;color:var(--lblue);font-size:11.5px;line-height:1.5}
 
-/* listas de alerta */
-.alert{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.alert:last-child{border-bottom:0}
-.alert .when{font-size:11.5px;color:var(--muted);min-width:96px;flex:0 0 auto}
-.alert .when i{display:block;font-style:italic;opacity:.7;font-size:10.5px;margin-top:1px}
-.alert b{display:block;font-size:14px}
-.alert p{font-size:13px;color:var(--muted);margin:2px 0 0}
 .sev{font-size:10.5px;font-weight:bold;padding:2px 7px;border-radius:2px;text-transform:uppercase;letter-spacing:.05em;height:fit-content}
-.sev.r{background:#FBE9E7;color:var(--red)}
-.sev.a{background:#FFF4DB;color:var(--amber)}
-.sev.g{background:#E8F5ED;color:var(--green)}
 
 /* tabelas */
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -186,15 +176,6 @@ textarea{min-height:78px;resize:vertical}
 .reassure-eyebrow{display:block;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.06em;color:#B5790A;margin-bottom:3px}
 .reassure-banner h5{margin:0 0 6px;font-size:19px;font-weight:800;color:#7A4E00;line-height:1.3}
 .reassure-banner p{margin:0;font-size:14px;color:#6B4A1E;line-height:1.55}
-.expect-label{font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 10px}
-.expect-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.expect-tile{border-radius:10px;padding:16px;color:#fff;position:relative;overflow:hidden}
-.expect-tile.rain{background:linear-gradient(135deg,#1B4E9B,#123A68)}
-.expect-tile.heat{background:linear-gradient(135deg,#E85F13,#C0392B)}
-.expect-tile.fire{background:linear-gradient(135deg,#C0392B,#7A1F13)}
-.expect-tile .ico{width:34px;height:34px;margin-bottom:10px}
-.expect-tile h5{margin:0 0 4px;font-size:14px}
-.expect-tile p{margin:0;font-size:12px;opacity:.9;line-height:1.45}
 .tag.news{background:#EAF1FF;border-color:#C7DBFA;color:#1B4E9B}
 .sev.chan-sms{background:#EAF1FF;color:#1B4E9B}
 .sev.chan-cb{background:var(--critical-soft);color:#9c1f1f}
@@ -337,13 +318,7 @@ footer.foot strong{color:#fff}
   .mod-body{padding:14px}
 
   /* cartões de 3 colunas viram 1 coluna */
-  .whatis-row,.expect-row{grid-template-columns:1fr}
-
-  /* linhas de alerta: hora e selo numa linha, texto embaixo em largura cheia */
-  .alert{flex-wrap:wrap;row-gap:4px;column-gap:12px}
-  .alert .when{order:1;flex:0 1 auto;min-width:0}
-  .alert .sev{order:2;margin-left:auto}
-  .alert>div{order:3;flex:1 1 100%}
+  .whatis-row{grid-template-columns:1fr}
 
   .elnino-head{padding:14px}
   .elnino-head h3{font-size:15px;white-space:normal;overflow:visible;text-overflow:clip}
@@ -471,24 +446,6 @@ footer.foot strong{color:#fff}
         <div><span class="reassure-eyebrow">Mensagem importante</span><h5>Não é motivo de pânico — é monitoramento e preparação</h5><p>O El Niño é um cenário de previsão e tendência climática, não uma tragédia em andamento. Os indicadores desta página mostram a situação real e atualizada do território fluminense, para que o Estado e a população se preparem com antecedência.</p></div>
       </div>
 
-      <div class="expect-label">O que esperar no Rio de Janeiro, a partir de setembro</div>
-      <div class="expect-row">
-        <div class="expect-tile rain">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 17a4 4 0 0 1 .5-8 5.5 5.5 0 0 1 10.6-1.7A4.5 4.5 0 0 1 17.5 17z"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="13" y1="20" x2="13" y2="22"/><line x1="9" y1="16" x2="9" y2="18"/><line x1="13" y1="16" x2="13" y2="18"/></svg>
-          <h5>Chuvas abaixo da média</h5>
-          <p>Tendência de menos chuva em grande parte do Estado.</p>
-        </div>
-        <div class="expect-tile heat">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2 2 0 0 0-4 0v11.26a4 4 0 1 0 4 0z"/></svg>
-          <h5>Temperaturas mais altas</h5>
-          <p>Calor acima da média climatológica na maior parte do território.</p>
-        </div>
-        <div class="expect-tile fire">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4-2 7a3 3 0 0 0 6 0c0-1-.5-2-1-2 1 1 2 2.5 2 4.5A5 5 0 0 1 7 11.5C7 7 12 6 12 2z"/></svg>
-          <h5>Mais risco de incêndio</h5>
-          <p>Aumento do risco de incêndios florestais em todo o Estado.</p>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -517,17 +474,6 @@ footer.foot strong{color:#fff}
   </div>
 
   
-
-  <div class="mod">
-    <div class="mod-head">
-      <div><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><h3>Alertas operacionais</h3><span class="sample-flag">Em fase de construção — informação fictícia</span></div><p>Comunicações urgentes emitidas quando há iminência de impacto crítico. Publicadas aqui no mesmo momento em que seguem aos órgãos afetados.</p></div>
-    </div>
-    <div class="mod-body">
-      <div class="alert"><span class="when">10/08 · 06h40<i>(exemplo)</i></span><div><b>Risco muito alto de incêndio florestal — REDEC Serrana</b><p>Umidade abaixo de 20% e rajadas de vento previstas até 18h. Evite qualquer uso de fogo.</p></div><span class="sev r">Crítico</span></div>
-      <div class="alert"><span class="when">09/08 · 15h10<i>(exemplo)</i></span><div><b>Onda de calor — Região Metropolitana e Baixadas</b><p>Temperaturas acima de 38 °C por três dias consecutivos. Pontos de hidratação ativados.</p></div><span class="sev a">Atenção</span></div>
-      <div class="alert"><span class="when">08/08 · 09h00<i>(exemplo)</i></span><div><b>Restrição preventiva de captação — bacia do Rio Dois Rios</b><p>Vazões abaixo do mínimo de referência. Orientação para produtores rurais e concessionárias.</p></div><span class="sev a">Atenção</span></div>
-    </div>
-  </div>
 
   <div class="mod">
     <div class="mod-head">
@@ -613,7 +559,7 @@ footer.foot strong{color:#fff}
             <tr><td><b>Dashboards</b><br><span style="color:var(--muted)">Incêndios Florestais e Chuvas Intensas</span></td></tr>
           </tbody>
         </table>
-        <div class="dash-highlight">Para acesso ao dashboard de Incêndios Florestais — <a href="https://datastudio.google.com/u/0/reporting/3a74c60a-3ea3-4299-8d16-3db82398b8d8/page/p_79x2zw8v2d" target="_blank" rel="noopener">clique aqui →</a></div>
+        <div class="dash-highlight">Para acesso ao Painel Integrado NI²AD — <a href="https://analistadegeoinformacao.github.io/painel-fe-sedec-rj/#amb=sisgeo" target="_blank" rel="noopener">clique aqui →</a></div>
         <div class="note">Produtos desenvolvidos pelo NI²AD (Núcleo Integrado de Inteligência para Apoio à Decisão) da Força Especializada em Proteção e Defesa Civil — FE-SEDEC, vinculada à Secretaria de Estado de Defesa Civil do Rio de Janeiro — SEDEC-RJ.</div>
       </div>
     </div>
@@ -2217,10 +2163,12 @@ const eixosTransversais = {
  id:'transv', numero:'V', titulo:'Câmara Técnica Transversal',
  coord:'Secretaria-Executiva/SUBSEGOP', adjunto:'Cel Ana Martinez',
  eixos:[
-  {tema:'Comunicação Social e Alerta à População', of:'Ten Cel Diogo Rocha', orgCoord:'SEGOV', participantes:['SEGOV','Assejur (SEDEC)','SES','INEA','SEAPPADI','SEEDUC','Casa Civil'],
+  {tema:'Comunicação e Alerta', of:'Ten Cel Diogo Rocha', orgCoord:'SEGOV', participantes:['SEGOV','Assejur (SEDEC)','SES','INEA','SEAPPADI','SEEDUC','Casa Civil'],
    assuntos:'Campanhas educativas; alertas à população; combate à desinformação.'},
-  {tema:'Captação de Recursos e Articulação Federativa', of:'Ten Cel Adriana B.', orgCoord:'SEFAZ / SEPLAG', participantes:['SEFAZ','SEPLAG','Casa Civil','SEDEC'],
+  {tema:'Captação de Recursos e Articulação', of:'Ten Cel Adriana B.', orgCoord:'SEFAZ / SEPLAG', participantes:['SEFAZ','SEPLAG','Casa Civil','SEDEC'],
    assuntos:'Captação de recursos federais (MDR, MDA, MMA); articulação com Parlamento e ministérios.'},
+  {tema:'Inovação Tecnológica e Modernização Digital', of:'Não informado', orgCoord:'SETD', participantes:['SETD'],
+   assuntos:'Modernização tecnológica e inovação digital aplicada à gestão do Comitê, incluindo o desenvolvimento do Portal El Niño.'},
  ]
 };
 
@@ -2272,10 +2220,11 @@ const axrCamaras = [
 
 // Eixos Transversais: quadro equivalente (mesma lógica R/P), construído a partir dos dados internos
 // do Sistema — NÃO consta na planilha oficial Matriz AxR, que cobre apenas as 4 Câmaras Técnicas.
-const axrTransversaisOrgs = ['SEGOV','Assejur (SEDEC)','SES','INEA','SEAPPADI','SEEDUC','Casa Civil','SEFAZ','SEPLAG','SEDEC'];
+const axrTransversaisOrgs = ['SEGOV','Assejur (SEDEC)','SES','INEA','SEAPPADI','SEEDUC','Casa Civil','SEFAZ','SEPLAG','SEDEC','SETD'];
 const axrTransversaisRows = [
- {tema:'Comunicação Social e Alerta à População', row:['R',null,'P','P','P','P','P',null,null,null]},
- {tema:'Captação de Recursos e Articulação Federativa', row:[null,null,null,null,null,null,'P','R','R','P']},
+ {tema:'Comunicação e Alerta', row:['R',null,'P','P','P','P','P',null,null,null,null]},
+ {tema:'Captação de Recursos e Articulação', row:[null,null,null,null,null,null,'P','R','R','P',null]},
+ {tema:'Inovação Tecnológica e Modernização Digital', row:[null,null,null,null,null,null,null,null,null,null,'R']},
 ];
 
 const decreto = [
@@ -2670,8 +2619,8 @@ const reunioes = [
    imgUrl:CONVITE_LIVE_DECRETO_MUNICIPAL_IMG_URL
  },
  {
-   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Captação de Recursos e Articulação Federativa',
-   camaraId:'transv', eixoTema:'Captação de Recursos e Articulação Federativa',
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Captação de Recursos e Articulação',
+   camaraId:'transv', eixoTema:'Captação de Recursos e Articulação',
    dataSort:'2026-08-11', data:'11/08/2026',
    assunto:'Seplag - CT transversal',
    responsavel:'Não informado',
@@ -2697,8 +2646,8 @@ const reunioes = [
    local:'On-line'
  },
  {
-   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
-   camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação e Alerta',
+   camaraId:'transv', eixoTema:'Comunicação e Alerta',
    dataSort:'2026-08-17', data:'17/08/2026',
    assunto:'Desenvolvimento de um Portal (site) do Comitê',
    responsavel:'Não informado',
@@ -2796,8 +2745,8 @@ const reunioes = [
    local:'On-line'
  },
  {
-   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
-   camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação e Alerta',
+   camaraId:'transv', eixoTema:'Comunicação e Alerta',
    dataSort:'2026-09-29', data:'29/09/2026', horario:'10h30',
    assunto:'3ª Reunião sobre o Portal El Niño — com SETD e Empresa (Microsoft)',
    responsavel:'Não informado',
@@ -2805,8 +2754,8 @@ const reunioes = [
    local:'On-line'
  },
  {
-   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
-   camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação e Alerta',
+   camaraId:'transv', eixoTema:'Comunicação e Alerta',
    dataSort:'2026-09-30', data:'30/09/2026',
    assunto:'4ª Reunião sobre o Portal El Niño — com SETD',
    responsavel:'Não informado',
@@ -2841,8 +2790,8 @@ const reunioes = [
    local:'Presencial · Auditório ESDEC'
  },
  {
-   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação Social e Alerta à População',
-   camaraId:'transv', eixoTema:'Comunicação Social e Alerta à População',
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação e Alerta',
+   camaraId:'transv', eixoTema:'Comunicação e Alerta',
    dataSort:'2026-10-06', data:'06/10/2026',
    assunto:'5ª Reunião sobre o Portal El Niño — com SETD, Empresa e Governo do RS',
    responsavel:'Não informado',
@@ -2854,6 +2803,24 @@ const reunioes = [
    camaraId:'ct2', eixoTema:null,
    dataSort:'2026-10-08', data:'08/10/2026',
    assunto:'4ª Reunião — acompanhamento das ações em andamento (leitura da ata da 2ª reunião)',
+   responsavel:'Não informado',
+   participantes:'Não informado',
+   local:'On-line'
+ },
+ {
+   camaraEixo:'V · Câmara Técnica Transversal — Eixo: Comunicação e Alerta',
+   camaraId:'transv', eixoTema:'Comunicação e Alerta',
+   dataSort:'2026-10-16', data:'16/10/2026',
+   assunto:'Projeto com Google (CEMADEN-RJ)',
+   responsavel:'Não informado',
+   participantes:'Não informado',
+   local:'On-line'
+ },
+ {
+   camaraEixo:'III · Incêndios Florestais e Proteção Ambiental',
+   camaraId:'ct3', eixoTema:null,
+   dataSort:'2026-10-19', data:'19/10/2026',
+   assunto:'Reunião da Câmara Técnica',
    responsavel:'Não informado',
    participantes:'Não informado',
    local:'On-line'
@@ -3022,6 +2989,12 @@ const paineisIntel = [
    titulo:'Relatório de Ocorrências do Dia 29/07/2026 (Vendaval)',
    resumo:'Duas análises independentes referentes ao período das 16h de 29/07/2026 às 8h de 30/07/2026: a primeira utiliza exclusivamente os registros individualizados do SISGEO do Corpo de Bombeiros Militar do Estado do Rio de Janeiro; a segunda utiliza exclusivamente as informações encaminhadas pelas Regionais de Defesa Civil (REDECs). Os quantitativos não foram somados, e não houve tentativa de eliminar coincidências entre as fontes.',
    pdfUrl:OCORRENCIAS_290726_PDF_URL, fileName:'Relatorio_Ocorrencias_2930072026_FESEDEC_NI2AD.pdf'
+ },
+ {
+   tipo:'Painel', fonte:'NI²AD — Força Especializada em Proteção e Defesa Civil (FE-SEDEC)',
+   titulo:'Painel Integrado NI²AD',
+   resumo:'Painel integrado do Núcleo Integrado de Inteligência para Apoio à Decisão (NI²AD), consolidando camadas de monitoramento operacional do SisGeO.',
+   url:'https://analistadegeoinformacao.github.io/painel-fe-sedec-rj/#amb=sisgeo'
  },
 ];
 
@@ -3205,7 +3178,7 @@ const acoesPreventivas = [
    camaraId:null, eixoTema:null,
    oQue:'Oficina Técnica da Defesa Civil — Elaboração e Atualização de Planos de Contingência Municipais, integrante da Agenda de Continuidade da Defesa Civil.',
    dataSort:'2026-09-30', quando:'30/09/2026 · 14h',
-   status:'programado',
+   status:'finalizado',
    quem:'Defesa Civil (SEDEC-RJ)',
    municipio:'Rio de Janeiro',
    onde:'On-line — transmitido do Quartel Central do CBMERJ (Praça da República, 45, Centro, Rio de Janeiro - RJ)',
@@ -3229,7 +3202,7 @@ const acoesPreventivas = [
    camaraId:null, eixoTema:null,
    oQue:'Segunda Reunião Plenária do Comitê Estadual de Enfrentamento aos Efeitos do El Niño, com apresentação do panorama de ações e alinhamento dos próximos passos entre as instituições e câmaras técnicas.',
    dataSort:'2026-10-20', quando:'20/10/2026 · 9h às 12h',
-   status:'programado',
+   status:'finalizado',
    quem:'Comitê El Niño',
    municipio:'Rio de Janeiro',
    onde:'Rio de Janeiro (Capital) — Auditório do EMG do Quartel Central',
@@ -3319,6 +3292,18 @@ const acoesPreventivas = [
    onde:'Não informado',
    como:'Elaboração do Plano de Contingência (PLANCON) da área de Agricultura, pela SEAPPADI.',
    resumo:'Elaboração do PLANCON — Agricultura, pela SEAPPADI.'
+ },
+ {
+   titulo:'Briefing Extraordinário CEMADEN-RJ',
+   camaraId:'transv', eixoTema:'Comunicação e Alerta',
+   oQue:'Briefing extraordinário com o CEMADEN-RJ.',
+   dataSort:'2026-10-15', quando:'15/10/2026',
+   status:'finalizado',
+   quem:'Não informado',
+   municipio:'Rio de Janeiro',
+   onde:'Não informado',
+   como:'Briefing extraordinário realizado com o CEMADEN-RJ.',
+   resumo:'Briefing Extraordinário CEMADEN-RJ.'
  },
 ];
 
